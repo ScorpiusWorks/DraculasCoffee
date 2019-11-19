@@ -1,0 +1,626 @@
+/*this file is containing all of your theme style and modification*/
+/* Table of content
+1. PRELOADER ================================================ # LINE 16
+2. MISC AND RE-USABLE ELEMENT =============================== # LINE 174
+3. HOME SECTION ============================================= # LINE 204
+4. SERVICE  SECTION ========================================= # LINE 271
+5. CTA SECTION ============================================== # LINE 286
+6. ABOUT US SECTION ========================================= # LINE 314
+7. WORKS SECTION ============================================ # LINE 329
+8. SUBSCRIBE SECTION ======================================== # LINE 375
+9. FOOTER SECTION =========================================== # LINE 406
+
+*/
+/* ============= PRELOADER STYLE ============ */
+#boss-preloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #eaeaea;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+.boss-pre-vcenter {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.boss-pre-vcenter h4 {
+  color: #323232;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* ============== Misc and re-usable element ============== */
+
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.boss-section-heading h2 {
+  color: #e74c3c;
+  font-size: 40px;
+  font-weight: 700;
+}
+.boss-section-heading p {
+  line-height: 30px;
+}
+
+.boss-header-border {
+  background: url(../images/header-border.png) no-repeat;
+  height: 13px;
+  width: 78px;
+  display: inline-block;
+  padding-bottom: 40px;
+}
+
+.boss-dark-overlay {
+  background: rgba(34, 34, 34, 0.35);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1 {
+  color: #bb0000;
+}
+
+/* ============== Home style ============== */
+.boss-home-area {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+.boss-home-area .boss-header h1 {
+  padding: 0;
+  font-size: 3.5em;
+}
+
+.boss-home-area .boss-header p {
+  color: white;
+  font-size: 1.2em;
+  line-height: normal;
+  padding-top: 20px;
+}
+
+.boss-home-area .boss-logo img {
+  width: 230px;
+  height: 230px;
+  margin: auto;
+}
+
+.boss-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/overlay.png) repeat;
+}
+
+.boss-home-area > .container {
+  height: 100%;
+  position: relative;
+}
+
+.boss-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 50%;
+}
+
+.boss-countdown div {
+  display: inline-block;
+}
+.boss-countdown div span {
+  display: block;
+  width: 240px;
+}
+.boss-countdown div span:first-child {
+  font-size: 50px;
+  font-weight: 300;
+  font-weight: 700;
+}
+.boss-countdown div span:last-child {
+  font-size: 30px;
+  line-height: 20px;
+  border: 3px solid;
+  padding: 15px 10px;
+  margin: 20px auto 0px;
+  width: 170px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.boss-scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  display: inline-block;
+  height: 40px;
+  text-align: center;
+}
+.boss-scroll-down a {
+  /*color: #bb0000 !important;*/
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid;
+  line-height: 40px;
+}
+.boss-scroll-down a:hover, .boss-scroll-down a:focus {
+  color: white;
+}
+
+/* ============= SERVICE STYLE ============ */
+.boss-single-service-2 {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.boss-single-service-2:hover {
+  border: 1px solid;
+}
+
+.boss-single-service-2 h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.boss-single-service-2 .sub-title {
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.boss-single-service-2-content {
+  position: absolute;
+  top: 70%;
+  opacity: 0;
+  padding: 0 20px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.boss-single-service-2-content .text-left {
+  padding: 10px 20px;
+  line-height: 20px;
+}
+
+.boss-single-service-2:hover .boss-single-service-2-content {
+  top: 15%;
+  opacity: 1;
+}
+
+.boss-service-2-image {
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.boss-single-service-2:hover .boss-service-2-image {
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  top: 20%;
+  left: 10%;
+  margin-top: -90px;
+  margin-left: -90px;
+}
+
+/* ============= cta style ============= */
+#boss-cta {
+  background: url(../images/CTA-background.jpeg) no-repeat top center;
+  background-size: cover;
+  padding: 50px 0;
+  position: relative;
+}
+#boss-cta .boss-header {
+  margin: 20px 0;
+}
+#boss-cta .boss-button {
+  margin-top: 10px;
+}
+#boss-cta .boss-button a {
+  font-size: 30px;
+  width: 200px;
+  height: 60px;
+  background-color: transparent;
+  font-weight: 700;
+  border: 3px solid;
+}
+#boss-cta .boss-button p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#boss-cta h1 {
+  color: black;
+}
+
+#boss-cta h4 {
+  color: black;
+}
+
+#boss-cta .boss-cta-button {
+  margin-top: 20px;
+  color: black;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#boss-cta .boss-cta-button:hover {
+  color: #bb0000;
+}
+
+/* =============== about style ============== */
+.boss-about-area .boss-company-work {
+  margin-top: 50px;
+}
+.boss-about-area .boss-big-logo {
+  margin-top: 100px;
+}
+
+.boss-company-history {
+  margin-top: 50px;
+}
+
+.boss-company-history h3 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.boss-company-history p {
+  text-align: center;
+}
+
+/* =============== work style ============== */
+.boss-work-area {
+  padding: 0;
+}
+.boss-work-area .boss-owl {
+  overflow: hidden;
+}
+.boss-work-area .owl-item:hover {
+  cursor: pointer;
+}
+
+.boss-item {
+  overflow: hidden;
+  position: relative;
+}
+.boss-item:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.boss-item:hover .boss-caption h3 {
+  top: 50%;
+  margin-top: -26px;
+  opacity: 1;
+}
+.boss-item img {
+  width: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.boss-item .boss-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+  text-align: center;
+}
+.boss-item .boss-caption h3 {
+  font-weight: 700;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  width: 80%;
+}
+
+/* =============== subscibe style ============= */
+.boss-subscribe-area {
+  padding: 80px 0;
+  background: url(../images/FollowUs.jpeg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.boss-form {
+  margin-top: 20px;
+}
+.boss-form input {
+  height: 50px;
+  padding: 0 20px;
+  margin-top: 20px;
+  border: 3px solid;
+  outline: none;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+}
+.boss-form input:focus {
+  border-color: #ff00ff;
+}
+.boss-form input[type="submit"]:hover {
+  border-color: #ff00ff;
+  background: #ff00ff;
+  color: #fff;
+}
+
+.social-icons {
+  max-width: 70px;
+}
+
+.boss-subscribe-left-side h1 {
+  text-align: center;
+  color: black;
+}
+
+.boss-subscribe-right-side h4 {
+  text-align: center;
+}
+
+.boss-subscribe-right-side i.fa {
+  text-align: center;
+  font-size: 4em;
+  color: black;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  max-width: 100px;
+  margin: 0 auto;
+  /*display: block;*/
+  padding: 30px;
+}
+
+.boss-subscribe-right-side i.fa:hover{
+  color: #bb0000;
+}
+
+.flex-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+/* ============ Google Map ============== */
+#google-container {
+  position: relative;
+  min-width: 100%;
+  min-height: 400px;
+  background-color: #e7eaf0;
+}
+
+#cd-google-map {
+  position: relative;
+  padding: 0px;
+}
+
+#cd-zoom-in, #cd-zoom-out {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: rgba(187, 0, 0, 0.9);
+  background-repeat: no-repeat;
+  background-size: 32px 64px;
+  background-image: url("../images/cd-icon-controller.svg");
+}
+
+.no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
+  background-color: #bb0000;
+}
+
+#cd-zoom-in {
+  background-position: 50% 0;
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+#cd-zoom-out {
+  background-position: 50% -32px;
+}
+
+
+/* ============ Contact ============== */
+#contact {
+	padding: 80px 0 40px 0;
+	background: #222;
+}
+#contact .contact-item {
+	padding: 10px;
+	margin: 10px;
+	height: auto;
+	background: #333;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+#contact .contact-item p {
+  word-wrap: break-word;
+}
+
+#contact h3 {
+	font-size: 20px;
+	font-weight: 700;
+	margin-top: 40px;
+  text-transform: uppercase;
+  color: #bb0000;
+}
+#contact form {
+	padding: 30px 0;
+}
+#contact i.fa {
+	font-size: 22px;
+	color: #bb0000;
+	margin-bottom: 10px;
+}
+#contact .text-danger {
+	color: #ff3333;
+	text-align: left;
+}
+label {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	float: left;
+}
+#contact .form-control {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: none;
+	transition: none;
+}
+#contact .form-control:focus {
+	border-color: inherit;
+	outline: 0;
+	-webkit-box-shadow: transparent;
+	box-shadow: transparent;
+}
+#contact .btn-default {
+	background: #bb0000;
+	border: 0;
+	border-radius: 4px;
+	padding: 6px 14px;
+	color: white;
+	margin-top: 15px;
+	font-size: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#contact .btn-default:hover, #contact .btn-default:focus {
+	color: white;
+	background: black;
+}
+.btn:active, .btn.active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+	outline: none;
+	outline-offset: none;
+}
+
+
+/* ============ footer style ============== */
+.boss-footer-area {
+  padding: 50px 0;
+}
+.boss-footer-area img {
+  margin-bottom: 30px;
+  width: 143px;
+  height: 143px;
+}
+.boss-footer-area p {
+  line-height: 25px;
+  padding: 0;
+  color: #bb0000;
+  margin-bottom: 0px;
+}
+.boss-footer-area p a {
+  /*font-weight: 400;*/
+}
+
+.boss-copyright-scorpius p {
+  color: #36c2f2;
+}
+
+.boss-copyright-scorpius a {
+  color: #36c2f2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.boss-copyright-scorpius a:hover {
+  color: #038FBF;
+}
